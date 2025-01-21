@@ -1,1 +1,1 @@
-This repository is used to manage CIS220C homework
+This repository is used to manage CIS220C programming assignments

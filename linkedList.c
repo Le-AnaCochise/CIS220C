@@ -245,10 +245,10 @@ void ListInsertionSortSinglyLinked(List* list) {
 
 // Main
 int main() {
-    List list; 		// struct "List" with variable definition "List" holding "list" as data
+	List list; 		// struct "List" with variable definition "List" holding "list" as data
 	int sum;
 	
-    initiateList(&list); 		// calls the function that initiates the list
+	initiateList(&list); 		// calls the function that initiates the list
 	
 	// Display the list 
 	printf("List: "); 
@@ -258,12 +258,12 @@ int main() {
 	sum = sumDataValues(&list); 		// sum is assigned to a function that will add all the node data in the list
 	printf("The sum of the list's data values is: %d\n", sum); 		// displays the data
 
-    // Append elements
-    ListAppend(&list, 10);
-    ListAppend(&list, 20);
+	// Append elements
+	ListAppend(&list, 10);
+	ListAppend(&list, 20);
 	
 	// Prepend elements
-    ListPrepend(&list, 30);
+	ListPrepend(&list, 30);
 	
 	// Insert a node of data after another number
 	ListInsertAfter(&list, 30, 40); 		// 30 is the header

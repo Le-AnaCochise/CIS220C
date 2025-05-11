@@ -44,13 +44,12 @@ HashTable* createHashTable(int size) {
 int hash(char *key) {
 	// Added
 	int stringHash = 0; 		// sets initial value to 0
-    int multiplier = 13; 		// sets multiplier as 13
-    while (*key) { 		// while the current character != '\0' (null terminator)
-        stringHash = (stringHash * multiplier) + *key; 		// updates stringHash based on the pseudoCode provided in Figure 6.8.3 in zyBooks
-        key++; 		// iterate to next character of the key 
-    }
-    return stringHash; 		// returns the hash value 
-    
+	int multiplier = 13; 		// sets multiplier as 13
+	while (*key) { 		// while the current character != '\0' (null terminator)
+		stringHash = (stringHash * multiplier) + *key; 		// updates stringHash based on the pseudoCode provided in Figure 6.8.3 in zyBooks
+		key++; 		// iterate to next character of the key 
+	}
+	return stringHash; 		// returns the hash value   
 }
 
 // Function to insert a key-value pair into the hash table, pseudocode found in Figure 6.3.1
@@ -134,7 +133,7 @@ void printTable(HashTable *table) {
             printf("empty\n");  
         } else {
             while (currentItem != NULL) {
-				// Added
+	// Added
                 int hashValue = hash(currentItem->key); 		// calculates the hash value for each key
                 printf("[Hash is: %d, key is: %s, value is: %s] ", hashValue, currentItem->key, currentItem->value);
                 currentItem = currentItem->next;
